@@ -3,7 +3,7 @@ This repository provides Python 3 code examples for pulling data from CU Librari
 
 ## Sierra API Setup
 
-After receiving Sierra API Key and secret. Set ENVIRONMENTAL Variable.
+After receiving Sierra API Key and Secret. Set and ENVIRONMENTAL Variable.
 
         SIERRA_KEY_SECRET="<Sierra Key>:<Sierra Secret>"
 
