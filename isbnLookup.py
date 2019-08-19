@@ -16,12 +16,13 @@ def set_request_header():
     access=decode_response(req)
     return {"Content-Type":"application/json","Authorization": "Bearer {0}".format(access['access_token'])}
 
-def search_isbn(isbn_text):
+def search_api(search_text,index='isbn'):
     headers=set_request_header()
-    req = requests.get("{0}/bibs/search?index=isbn&text={1}".format(api_url,isbn_text),headers=headers)
+    req = requests.get("{0}/bibs/search?index={1}&text={2}".format(api_url,index,search_text),headers=headers)
     return req.json()
 
 if __name__ == "__main__":
-    isbn_text=sys.argv[1]
-    data=search_isbn(isbn_text)
+    index=sys.argv[1]
+    search_text=sys.argv[2]
+    data=search_api(search_text,index)
     print(json.dumps(data,indent=4))
