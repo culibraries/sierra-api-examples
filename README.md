@@ -15,7 +15,9 @@ Script use Requests Library
 
 ## Run Script
 
-        $ python isbnLookup.py 067944453x
+Script runs call to Sierra API: args index and search_text
+
+        $ python isbnLookup.py isbn 067944453x
         
         {
             "count": 1,
@@ -24,6 +26,46 @@ Script use Requests Library
             "entries": [
                 {
                     "relevance": 2.4000000953674316,
+                    "bib": {
+                        "id": "2614489",
+                        "updatedDate": "2014-11-23T13:39:12Z",
+                        "createdDate": "1996-10-09T14:42:21Z",
+                        "deleted": false,
+                        "suppressed": false,
+                        "lang": {
+                            "code": "eng",
+                            "name": "English"
+                        },
+                        "title": "Trout : an illustrated history",
+                        "author": "Prosek, James, 1975-",
+                        "materialType": {
+                            "code": "m  ",
+                            "value": "Books"
+                        },
+                        "bibLevel": {
+                            "code": "d",
+                            "value": "DLC"
+                        },
+                        "publishYear": 1996,
+                        "catalogDate": "1997-05-09",
+                        "country": {
+                            "code": "nyu",
+                            "name": "New York"
+                        }
+                    }
+                }
+            ]
+        }
+
+        $ python isbnLookup.py title "Trout : an illustrated history"
+
+        {
+            "count": 1,
+            "total": 1,
+            "start": 0,
+            "entries": [
+                {
+                    "relevance": 2.200000047683716,
                     "bib": {
                         "id": "2614489",
                         "updatedDate": "2014-11-23T13:39:12Z",
