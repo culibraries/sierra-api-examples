@@ -1,5 +1,5 @@
 # Sierra API Examples
-This repository provides Python code examples for pull data from CU Libraries Sierra API.
+This repository provides Python 3 code examples for pull data from CU Libraries Sierra API.
 
 ## Sierra API Setup
 
