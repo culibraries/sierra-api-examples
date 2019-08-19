@@ -19,8 +19,9 @@ def set_request_header():
 def search_isbn(isbn_text):
     headers=set_request_header()
     req = requests.get("{0}/bibs/search?index=isbn&text={1}".format(api_url,isbn_text),headers=headers)
-    print(json.dumps(decode_response(req),indent=4))
+    return req.json()
 
 if __name__ == "__main__":
     isbn_text=sys.argv[1]
-    search_isbn(isbn_text)
+    data=search_isbn(isbn_text)
+    print(json.dumps(data,indent=4))
